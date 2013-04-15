@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider :virtualbox do |vb|
     vb.gui = false
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", "1536"]
   end
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
