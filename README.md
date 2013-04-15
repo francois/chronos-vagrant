@@ -9,3 +9,5 @@ Chronos is pre-cloned into ~/chronos. To install, run:
     vagrant ssh
     cd chronos
     bin/installer.bash
+
+    # I suggest you install mesos to /home/vagrant/mesos
