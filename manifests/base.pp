@@ -19,7 +19,7 @@ package{ $packages :
   require => Exec['apt-get update'],
 }
 
-$chronos_already_installed = 'test -d /home/vagrant/chronos'
+$chronos_already_installed = '/bin/test -d /home/vagrant/chronos'
 
 exec{'git clone chronos':
   command => '/usr/bin/git clone git://github.com/airbnb/chronos.git /home/vagrant/chronos && /bin/chmod -R vagrant:vagrant /home/vagrant/chronos',
