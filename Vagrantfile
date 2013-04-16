@@ -28,7 +28,9 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider :virtualbox do |vb|
     vb.gui = false
-    vb.customize ["modifyvm", :id, "--memory", "1536"]
+
+    # Compiling mesos really A LOT of RAM
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
   end
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
