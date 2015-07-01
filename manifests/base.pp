@@ -22,7 +22,7 @@ package{ $packages :
 $chronos_already_installed = '/usr/bin/test -d /home/vagrant/chronos'
 
 exec{'git clone chronos':
-  command => '/usr/bin/git clone git://github.com/airbnb/chronos.git /home/vagrant/chronos && /bin/chmod -R vagrant:vagrant /home/vagrant/chronos',
+  command => '/usr/bin/git clone git://github.com/airbnb/chronos.git /home/vagrant/chronos && /bin/chown -R vagrant:vagrant /home/vagrant/chronos',
   require => Package[ $packages ],
   unless  => $chronos_already_installed,
 }
